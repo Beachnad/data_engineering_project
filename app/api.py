@@ -37,10 +37,8 @@ def predict(passenger: Passenger):
     df = preprocess_data(df)
     X = df.loc[:, ['sex_male', 'class_first', 'class_second', 'age']]
 
-    prediction = int(knn_model.predict(X)[0])
-    return {'survives': prediction}
-
-
-if __name__ == '__main__':
     with open('titanic_model/knn_model.p', 'rb') as f:
         knn_model: KNeighborsClassifier = pickle.load(f)
+
+    prediction = int(knn_model.predict(X)[0])
+    return {'survives': prediction}
