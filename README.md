@@ -28,12 +28,12 @@ The code handling the api is found in the `apy.py` script and can be easily ran 
 
 Finally, to help this code easily port to other machines, we use Docker to create an image and run the code inside a Docker container built from this image. 
 
-```bash
+```shell
 docker build -t data_engineering_project .
-docker run --name mycontainer -p 80:80 data_engineering_project
+docker run -p 80:80 data_engineering_project
 ```
 
-
+The easiest way to begin testing the API is to use the doc page which is automatically included when using FastApi. Assuming that the API is running, the doc page should be accessible to here: `127.0.0.1:80/docs`. To submit a request, expand the POST endpoint click the "Try it out" button on the top right of the window.
 
 ## Continuous Testing
 
