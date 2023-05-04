@@ -1,0 +1,5 @@
+knn_model.p
+.venv/
+.idea/
+__pycache__/
+
