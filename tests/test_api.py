@@ -1,4 +1,4 @@
-from api import app
+from app.api import app
 from titanic_model.train import run
 from fastapi.testclient import TestClient
 
