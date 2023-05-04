@@ -1,5 +1,5 @@
 from api import app
-from titanic_model.train import run, get_data, preprocess_data
+from titanic_model.train import run
 from fastapi.testclient import TestClient
 
 

@@ -11,6 +11,7 @@ scikit-learn = "^1.2.2"
 fastapi = "^0.95.1"
 uvicorn = "^0.22.0"
 httpx = "^0.24.0"
+ruff = "^0.0.264"
 
 [tool.poetry.dev-dependencies]
 
