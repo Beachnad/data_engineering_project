@@ -7,10 +7,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from titanic_model.train import preprocess_data
 
 
-with open('titanic_model/knn_model.p', 'rb') as f:
-    knn_model: KNeighborsClassifier = pickle.load(f)
-
-
 class PassengerClassEnum(IntEnum):
     first = 1
     second = 2
@@ -43,3 +39,8 @@ def predict(passenger: Passenger):
 
     prediction = int(knn_model.predict(X)[0])
     return {'survives': prediction}
+
+
+if __name__ == '__main__':
+    with open('titanic_model/knn_model.p', 'rb') as f:
+        knn_model: KNeighborsClassifier = pickle.load(f)
