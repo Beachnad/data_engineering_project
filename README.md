@@ -32,3 +32,7 @@ Finally, to help this code easily port to other machines, we use Docker to creat
 docker build -t data_engineering_project .
 docker run --name mycontainer -p 80:80 data_engineering_project
 ```
+
+## Continuous Testing
+
+In order to catch mistakes before they impact production
