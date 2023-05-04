@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 import pickle
+from pathlib import Path
 
 
 def get_data():
@@ -60,7 +61,7 @@ def run():
     accuracy = np.sum(knn.predict(X) == Y) / len(X)
     print(accuracy)
 
-    with open('knn_model.p', 'wb+') as f:
+    with (Path(__file__).parent / 'knn_model.p').open('wb+') as f:
         pickle.dump(knn, f)
 
 
