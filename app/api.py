@@ -37,6 +37,7 @@ def predict(passenger: Passenger):
     df = preprocess_data(df)
     X = df.loc[:, ['sex_male', 'class_first', 'class_second', 'age']]
 
+    # We would want to avoid loading this in on every API call in a production codebase.
     with open('titanic_model/knn_model.p', 'rb') as f:
         knn_model: KNeighborsClassifier = pickle.load(f)
 
